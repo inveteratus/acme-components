@@ -1,0 +1,30 @@
+{
+    "name": "acme/components",
+    "description": "Laravel Blade Component Suite",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Acme\\Components\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Inveteratus",
+            "email": "alan.mcfarlane@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Acme\\Components\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "v10.32.1"
+    }
+}
