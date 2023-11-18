@@ -16,7 +16,7 @@ class InstallCommand extends Command
         $this->installNodePackages();
         $this->createTailwindConfig();
         $this->createPostcssConfig();
-        
+
     }
 
     private function installNodePackages(): void

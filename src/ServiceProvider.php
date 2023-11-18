@@ -2,6 +2,8 @@
 
 namespace Acme\Components;
 
+use Acme\Components\Commands\InstallCommand;
+
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     public function boot(): void
