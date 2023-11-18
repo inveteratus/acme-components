@@ -11,7 +11,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->publishes([
             __DIR__ . '/../resources/css' => resource_path('css/acme'),
             __DIR__ . '/../resources/js' => resource_path('js/acme'),
-        ]);
+        ], 'acme-assets');
     }
 
     public function register(): void
