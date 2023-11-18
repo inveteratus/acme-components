@@ -7,7 +7,8 @@ npm install -D tailwindcss \
                @tailwindcss/forms \
                @fontsource/ibm-plex-sans \
                bootstrap-icons \
-               alpinejs
+               alpinejs \
+               @alpinejs/persist
 
 npx tailwindcss init -p
 
