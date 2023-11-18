@@ -25,6 +25,6 @@
     "prefer-stable": true,
     "require": {
         "php": "^8.2",
-        "illuminate/support": "v10.32.1"
+        "laravel/framework": "^10.32"
     }
 }
