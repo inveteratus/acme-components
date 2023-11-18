@@ -14,13 +14,13 @@ class InstallCommand extends Command
     public function handle(): void
     {
         $this->installNodePackages();
-        $this->createTailwindConfig();
-        $this->createPostcssConfig();
-
+        $this->copyConfigStubs();
     }
 
     private function installNodePackages(): void
     {
+        $this->info('Install node packages...');
+
         $packages = [
             'tailwindcss', 'postcss', 'autoprefixer',
             '@tailwindcss/forms',
@@ -32,17 +32,18 @@ class InstallCommand extends Command
         $process->run();
     }
 
-    private function createTailwindConfig(): void
+    private function copyConfigStubs(): void
     {
-        (new Filesystem())->copy(
+        $this->info('Copying config stubs...');
+
+        $fs = new Filesystem();
+
+        $fs->copy(
             __DIR__ . '/../../stubs/tailwind.config.js',
             base_path('tailwind.config.js')
         );
-    }
 
-    private function createPostcssConfig(): void
-    {
-        (new Filesystem())->copy(
+        $fs->copy(
             __DIR__ . '/../../stubs/postcss.config.js',
             base_path('postcss.config.js')
         );
