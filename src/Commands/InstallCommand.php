@@ -39,39 +39,39 @@ class InstallCommand extends Command
         $fs = new Filesystem();
 
         $fs->copy(
-            __DIR__ . '/../../stubs/tailwind.config.js',
-            base_path('tailwind.config.js')
-        );
-
-        $fs->copy(
             __DIR__ . '/../../stubs/postcss.config.js',
             base_path('postcss.config.js')
         );
 
-        $fs->copyDirectory(
-            __DIR__ . '/../../stubs/app/Http/Controllers/Acme',
-            base_path('app/Http/Controllers')
-        );
-
-        $fs->copyDirectory(
-            __DIR__ . '/../../stubs/resources/views/acme',
-            base_path('resources/views')
-        );
-
-        $fs->copy(
-            __DIR__ . '/../../stubs/routes/acme.php',
-            base_path('routes')
-        );
-
-        $fs->copyDirectory(
-            __DIR__ . '/../../stubs/resources/js/acme',
-            base_path('resources/js')
-        );
-
-        $fs->copyDirectory(
-            __DIR__ . '/../../stubs/resources/css/acme',
-            base_path('resources/css')
-        );
+//        $fs->copy(
+//            __DIR__ . '/../../stubs/tailwind.config.js',
+//            base_path('tailwind.config.js')
+//        );
+//
+//        $fs->copyDirectory(
+//            __DIR__ . '/../../stubs/app/Http/Controllers/Acme',
+//            base_path('app/Http/Controllers')
+//        );
+//
+//        $fs->copyDirectory(
+//            __DIR__ . '/../../stubs/resources/css/acme',
+//            base_path('resources/css')
+//        );
+//
+//        $fs->copyDirectory(
+//            __DIR__ . '/../../stubs/resources/js/acme',
+//            base_path('resources/js')
+//        );
+//
+//        $fs->copyDirectory(
+//            __DIR__ . '/../../stubs/resources/views/acme',
+//            base_path('resources/views')
+//        );
+//
+//        $fs->copy(
+//            __DIR__ . '/../../stubs/routes/acme.php',
+//            base_path('routes')
+//        );
     }
 }
 
