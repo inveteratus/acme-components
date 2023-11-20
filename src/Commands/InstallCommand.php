@@ -50,7 +50,7 @@ class InstallCommand extends Command
 
         $fs->copyDirectory(
             __DIR__ . '/../../stubs/app/Http/Controllers/Acme',
-            base_path('app/Http/Controllers')
+            base_path('app/Http/Controllers/Acme')
         );
 
         $fs->copyDirectory(
