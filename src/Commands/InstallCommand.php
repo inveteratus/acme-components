@@ -13,13 +13,13 @@ class InstallCommand extends Command
 
     public function handle(): void
     {
-        $this->installNodePackages();
-        $this->copyConfigStubs();
+        $this->installDependencies();
+        $this->copyFiles();
     }
 
-    private function installNodePackages(): void
+    private function installDependencies(): void
     {
-        $this->info('Install node packages...');
+        $this->info('Installing dependencies ...');
 
         $packages = [
             'tailwindcss', 'postcss', 'autoprefixer',
@@ -32,9 +32,9 @@ class InstallCommand extends Command
         $process->run();
     }
 
-    private function copyConfigStubs(): void
+    private function copyFiles(): void
     {
-        $this->info('Copying config stubs...');
+        $this->info('Copying files...');
 
         $fs = new Filesystem();
 
@@ -47,5 +47,31 @@ class InstallCommand extends Command
             __DIR__ . '/../../stubs/postcss.config.js',
             base_path('postcss.config.js')
         );
+
+        $fs->copyDirectory(
+            __DIR__ . '/../../stubs/app/Http/Controllers/Acme',
+            base_path('app/Http/Controllers')
+        );
+
+        $fs->copyDirectory(
+            __DIR__ . '/../../stubs/resources/views/acme',
+            base_path('resources/views')
+        );
+
+        $fs->copy(
+            __DIR__ . '/../../stubs/routes/acme.php',
+            base_path('routes')
+        );
+
+        $fs->copyDirectory(
+            __DIR__ . '/../../stubs/resources/js/acme',
+            base_path('resources/js')
+        );
+
+        $fs->copyDirectory(
+            __DIR__ . '/../../stubs/resources/css/acme',
+            base_path('resources/css')
+        );
     }
 }
+
