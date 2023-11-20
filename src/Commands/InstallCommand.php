@@ -49,23 +49,23 @@ class InstallCommand extends Command
         );
 
         $fs->copyDirectory(
-            __DIR__ . '/../../stubs/app/Http/Controllers/Acme',
+            __DIR__ . '/../../stubs/app/Http/Controllers',
             base_path('app/Http/Controllers/Acme')
         );
 
         $fs->copyDirectory(
-            __DIR__ . '/../../stubs/resources/css/acme',
-            base_path('resources/css')
+            __DIR__ . '/../../stubs/resources/css',
+            base_path('resources/css/acme')
         );
 
         $fs->copyDirectory(
-            __DIR__ . '/../../stubs/resources/js/acme',
-            base_path('resources/js')
+            __DIR__ . '/../../stubs/resources/js',
+            base_path('resources/js/acme')
         );
 
         $fs->copyDirectory(
-            __DIR__ . '/../../stubs/resources/views/acme',
-            base_path('resources/views')
+            __DIR__ . '/../../stubs/resources/views',
+            base_path('resources/views/acme')
         );
 
         $fs->copy(

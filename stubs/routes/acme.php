@@ -1,12 +1,5 @@
 <?php
 
-use App\Http\Controllers\Acme\EmailVerifyController;
-use App\Http\Controllers\Acme\LoginController;
-use App\Http\Controllers\Acme\LogoutController;
-use App\Http\Controllers\Acme\PasswordRecoveryController;
-use App\Http\Controllers\Acme\PasswordResetController;
-use App\Http\Controllers\Acme\RegisterController;
-use App\Http\Controllers\Acme\UserProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
