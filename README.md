@@ -29,8 +29,10 @@ Add to your `resources/js/app.json`
 import './bootstrap'
 import Alpine from "alpinejs"
 
-import toggleDarkMode from "./acme/dark.js"
-Alpine.data('toggleDarkMode', toggleDarkMode)
+import Acme from './acme';
+Object.keys(Acme).forEach((name) => {
+    Alpine.data(name, Acme[name])
+})
 
 import persist from "@alpinejs/persist"
 Alpine.plugin(persist)
